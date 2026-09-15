@@ -31,10 +31,10 @@ jobs:
       SRC_NAME: source
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Checkout doc repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: ${{ env.USER }}/${{ env.REPO_NAME }}
           token: ${{ secrets.GH_TOKEN_ACCESS }}
@@ -43,7 +43,7 @@ jobs:
           ref: ${{ github.ref }}
 
       - name: Set up Python 3
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: 3.x
 
